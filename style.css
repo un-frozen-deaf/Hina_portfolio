@@ -1,0 +1,159 @@
+/* --- 基本設定 --- */
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fa; /* 全体の背景を非常に薄い水色に */
+    color: #333; /* 基本の文字色 */
+    line-height: 1.8;
+}
+
+/* --- 全体のレイアウト --- */
+/* ページの最大幅を決めて中央に配置 */
+body > header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- ヘッダーとフッター --- */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0eaf0;
+    padding-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50; /* 少し濃いめのブルーグレー */
+    margin: 0;
+}
+
+header .job-title {
+    color: #76b8e4; /* メインの水色 */
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    color: #888;
+    font-size: 0.9em;
+    border-top: 1px solid #e0eaf0;
+}
+
+
+/* --- 各セクションの共通スタイル --- */
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* ほんのり影をつける */
+}
+
+h2 {
+    color: #76b8e4; /* メインの水色 */
+    border-bottom: 2px solid #eaf4f9;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+a {
+    color: #5b99c4; /* 少し濃いめの水色 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #76b8e4; /* ホバー時に明るく */
+    text-decoration: underline;
+}
+
+/* --- プロフィールセクション --- */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* テキストと画像の間の余白 */
+}
+
+.profile-text {
+    width: 60%;
+}
+
+.profile-image {
+    width: 40%;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%; /* 画像を円形にする */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- スキルセクション --- */
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* 折り返すようにする */
+    gap: 10px; /* スキル間の余白 */
+}
+
+.skills li {
+    background-color: #eaf4f9; /* 薄い水色の背景 */
+    color: #5b99c4;
+    padding: 5px 15px;
+    border-radius: 20px; /* 楕円形にする */
+    font-size: 0.95em;
+}
+
+
+/* --- 実績や経歴セクション --- */
+.project, .activity {
+    border-left: 3px solid #76b8e4;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.project:last-child, .activity:last-child {
+    margin-bottom: 0;
+}
+
+/* --- スマートフォン向けの調整（レスポンシブ対応） --- */
+@media (max-width: 768px) {
+    body {
+        line-height: 1.7;
+    }
+
+    body > header, main, footer {
+        padding: 15px;
+    }
+    
+    section {
+        padding: 20px;
+    }
+
+    /* プロフィールを縦並びにする */
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-text,
+    .profile-image {
+        width: 100%;
+    }
+
+    .profile-image {
+        margin-top: 20px;
+        max-width: 200px; /* スマホでは画像が大きくなりすぎないように */
+    }
+}

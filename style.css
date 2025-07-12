@@ -233,3 +233,46 @@ a:hover {
 #theme-toggle-button:hover {
     background-color: rgba(128, 128, 128, 0.1);
 }
+
+/* --- スキル詳細表示用のスタイル --- */
+.skills ul li {
+    position: relative; /* spanを絶対位置で配置するための基準 */
+}
+
+/* 詳細テキストのspanを普段は隠しておく */
+.skills ul li span {
+    visibility: hidden; /* 非表示にする */
+    opacity: 0;
+    
+    position: absolute;
+    bottom: 120%; /* liタグの上側に配置 */
+    left: 50%;
+    transform: translateX(-50%); /* 中央揃え */
+    
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: nowrap; /* テキストを改行させない */
+    
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* liにカーソルが乗った時にspanを表示する */
+.skills ul li:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 吹き出しの矢印部分 */
+.skills ul li span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}

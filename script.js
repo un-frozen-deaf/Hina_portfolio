@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- ここからタイピングアニメーションのコード ---
     new Typed('.job-title', {
-        strings: ['情報系学生', 'Webデベロッパー志望', '新しい技術が好きです。'], // 表示させたい文字列を配列で
+        strings: ['情報系学生', 'SE志望', '新しい技術が好きです。'], // 表示させたい文字列を配列で
         typeSpeed: 70,  // タイピングの速さ
         backSpeed: 40,  // バックペースの速さ
         backDelay: 1500, // タイピングしてから消すまでの待ち時間
